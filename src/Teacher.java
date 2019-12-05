@@ -3,12 +3,12 @@ public class Teacher extends Person {
     private String coursePreferences[];
 
 
-    public Teacher(int id, String lastName, String firstName) {
-        super(id, lastName, firstName);
+    public Teacher(String lastName, String firstName) {
+        super(lastName, firstName);
     }
 
-    public Teacher(int id, String lastName, String firstName, int coursesTaught, String[] coursePreferences) {
-        super(id, lastName, firstName);
+    public Teacher(String lastName, String firstName, int coursesTaught, String[] coursePreferences) {
+        super(lastName, firstName);
         this.coursesTaught = coursesTaught;
         this.coursePreferences = coursePreferences;
     }

@@ -1,7 +1,8 @@
 public class Person {
-    private int id = 0;
     private String lastName = "";
     private String firstName = "";
+    private int uniqueID = 0;
+    private int id = 0;
 
     public String getLastName() {
         return lastName;
@@ -19,17 +20,11 @@ public class Person {
         this.firstName = firstName;
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Person(int id, String lastName, String firstName) {
-        this.id = id;
+    public Person(String lastName, String firstName) {
+        this.id = uniqueID;
         this.lastName = lastName;
         this.firstName = firstName;
+        uniqueID++;
     }
 }

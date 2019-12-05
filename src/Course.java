@@ -1,24 +1,23 @@
 public class Course {
     //instance variables
-    private int id = 0;
+    private int uniqueID = 0;
     private String name = "";
     private int sections = 0;
+    private int id = 0;
 
     //constructors
+    public Course(String name) {
+        this.id = uniqueID;
+        this.name = name;
+        this.sections = 5;
+        uniqueID++;
+    }
 
-
-    public Course(int id, String name, int sections) {
-        this.id = id;
+    public Course(String name, int sections) {
+        this.id = uniqueID;
         this.name = name;
         this.sections = sections;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        uniqueID++;
     }
 
     public String getName() {
