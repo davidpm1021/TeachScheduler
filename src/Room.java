@@ -1,13 +1,14 @@
 public class Room {
     private static int id = 0;
     private int uniqueID;
-    private String name = "";
-    private Boolean roomStatus[];
+    private String roomName = "";
+    private Boolean roomStatus[] = new Boolean[]{false, false, false, false, false, false, false, false,};
 
-    public Room(String name, Boolean[] roomStatus) {
+    public Room(String name) {
         this.uniqueID = id;
-        this.name = name;
-        this.roomStatus = new boolean[] roomStatus;
+        this.roomName = name;
+        this.roomStatus = roomStatus;
+        id++;
 
     }
 
@@ -19,12 +20,12 @@ public class Room {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getRoomName() {
+        return roomName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setRoomName(String name) {
+        this.roomName = name;
     }
 
     public Boolean[] getRoomStatus() {
