@@ -1,12 +1,14 @@
 public class Room {
-    private int id = 0;
+    private static int id = 0;
+    private int uniqueID;
     private String name = "";
     private Boolean roomStatus[];
 
-    public Room(int id, String name, Boolean[] roomStatus) {
-        this.id = id;
+    public Room(String name, Boolean[] roomStatus) {
+        this.uniqueID = id;
         this.name = name;
-        this.roomStatus = roomStatus;
+        this.roomStatus = new boolean[] roomStatus;
+
     }
 
     public int getId() {

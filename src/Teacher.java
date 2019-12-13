@@ -1,5 +1,5 @@
 public class Teacher extends Person {
-    private int coursesTaught = 0;
+    private int numCoursesTaught = 0;
     private String coursePreferences[];
 
 
@@ -7,9 +7,10 @@ public class Teacher extends Person {
         super(lastName, firstName);
     }
 
-    public Teacher(String lastName, String firstName, int coursesTaught, String[] coursePreferences) {
+    public Teacher(String lastName, String firstName, int numCoursesTaught, String[] coursePreferences) {
         super(lastName, firstName);
-        this.coursesTaught = coursesTaught;
+        this.numCoursesTaught = numCoursesTaught;
         this.coursePreferences = coursePreferences;
+
     }
 }
